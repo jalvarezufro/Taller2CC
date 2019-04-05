@@ -29,9 +29,9 @@ public class testTaller2 {
     @Test
     public void testfloatToDec(){
         
-        assertEquals(1800, Taller2.floatToDec("0110011100001000"));
-        assertEquals(32000, Taller2.floatToDec("0111011111010000"));
-        assertEquals(-15433, Taller2.floatToDec("1111001110001001"));
+        assertEquals(1800, Taller2.floatToDec("0110011100001000"),0);
+        assertEquals(32000, Taller2.floatToDec("0111011111010000"),0);
+        assertEquals(-15433, Taller2.floatToDec("1111001110001001"),1);
     }
 
 }
