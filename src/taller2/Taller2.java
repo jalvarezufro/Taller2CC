@@ -15,7 +15,7 @@ import static java.lang.Math.pow;
 public class Taller2 {
 
     public static void main(String[] args) {
-        
+
     }
 
 // transforma un numero decimal a su representacion floante
@@ -85,15 +85,15 @@ public class Taller2 {
     }
 
     //devuelve la representacion decimal de un flotante
-    public static int floatToDec(String flotante) {
+    public static double floatToDec(String flotante) {
 
-        int decimal = mantissa(flotante);
-        if ("1".equals(""+flotante.charAt(0))) {
+        double decimal = mantissa(flotante);
+        if ("1".equals("" + flotante.charAt(0))) {
             decimal = decimal * -1;
 
         }
 
-        return decimal;
+        return (decimal);
     }
 
     //devuelve la representacion decimal de los bits del exponente
@@ -106,14 +106,14 @@ public class Taller2 {
 
     //calcula el valor en decimal de los bits de la mantisa
     public static int mantissa(String mantissa) {
-        int mantisa=0;
+        int mantisa = 0;
         int exponente = expFloat(mantissa.substring(1, 6));
         if (exponente > 10) {
             int aux = exponente - 10;
             exponente = 10;
             String cambiar = mantissa.substring(6, exponente + 6);
             cambiar = "1" + cambiar;
-            for (int i=0; i < aux; i++) {
+            for (int i = 0; i < aux; i++) {
                 cambiar = cambiar + "0";
             }
             System.out.print(cambiar);
@@ -122,8 +122,8 @@ public class Taller2 {
         } else if (exponente <= 10) {
             String cambiar = mantissa.substring(6, exponente + 6);
             cambiar = "1" + cambiar;
-           mantisa = parseInt(cambiar);
-          
+            mantisa = parseInt(cambiar);
+
         }
         return mantisa;
     }
